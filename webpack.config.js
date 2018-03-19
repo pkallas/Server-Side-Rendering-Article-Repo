@@ -4,8 +4,10 @@ module.exports = {
   entry: ['./src/client/index.js'],
   output: {
     path: path.join(__dirname, 'build'),
-    fileName: 'bundle.js',
+    filename: 'bundle.js',
+    chunkFilename: 'bundle.js',
   },
+  mode: 'development',
   module: {
     rules: [
       {
@@ -14,13 +16,14 @@ module.exports = {
           /\.html$/,
           /\.(js|jsx)$/,
           /\.css$/,
+          /\.json$/,
         ],
       }, {
         test: /\.(js|jsx)?$/,
         loader: 'babel-loader',
         include: [/(src)/],
         query: {
-          presets: ['es2015', 'react'],
+          presets: ['env', 'react'],
         },
       },
     ],
