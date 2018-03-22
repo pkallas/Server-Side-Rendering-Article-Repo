@@ -5,7 +5,6 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'build'),
     filename: 'bundle.js',
-    chunkFilename: 'bundle.js',
   },
   mode: 'development',
   module: {
