@@ -1,0 +1,9 @@
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-center > div > button {
+  margin-right: 10px;
+}
