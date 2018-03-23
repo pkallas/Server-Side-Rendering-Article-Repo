@@ -25,10 +25,14 @@ export default class LinkedPage extends Component {
 
   render() {
     return (
-      <div>
-        <button onClick={this.handleButtonClick}>Cool button</button>
+      <div className='flex-center'>
+        <div>
+          <button onClick={this.handleButtonClick}>Cool button</button>
+        </div>
         { this.state.hasServerResponded ? (
-          <p>{this.state.response}</p>
+          <div>
+            <p>{this.state.response}</p>
+          </div>
         ) : (
           null
         ) }
