@@ -8,6 +8,7 @@ export default class GithubSearch extends Component {
       searchBar: '',
       githubResult: {},
       hasRequestFinished: false,
+      error: false,
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -31,7 +32,9 @@ export default class GithubSearch extends Component {
     })
     .catch(error => {
       console.log('🔥🔥error (╯°□°）╯︵ ┻━┻🔥🔥', error);
-      throw error;
+      this.setState({
+        error: true,
+      });
     });
   }
 
@@ -52,7 +55,11 @@ export default class GithubSearch extends Component {
           <img src={this.state.githubResult.avatar_url} alt='Github Profile Picture' />
         ) : (
           <div>
-            <h3>Search for a Github user's profile picture</h3>
+            { this.state.error ? (
+              <h3>Your search returned no results. Make sure the username is valid.</h3>
+            ) : (
+              <h3>Search for a Github user's profile picture</h3>
+            )}
           </div>
         ) }
       </div>
