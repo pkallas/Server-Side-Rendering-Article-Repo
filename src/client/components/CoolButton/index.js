@@ -20,7 +20,10 @@ export default class CoolButton extends Component {
           response: data,
         });
       })
-      .catch(error => console.log(error));
+      .catch(error => {
+        console.log('🔥🔥error (╯°□°）╯︵ ┻━┻🔥🔥', error);
+        throw error;
+      });
   }
 
   render() {
