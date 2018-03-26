@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import HomePage from '../HomePage';
-import LinkedPage from '../LinkedPage';
+import { LinkedPage } from '../LinkedPage';
 import ErrorBoundary from '../ErrorBoundary';
 
 export default class App extends Component {

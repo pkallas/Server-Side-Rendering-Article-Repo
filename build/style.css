@@ -7,3 +7,12 @@
 .flex-center > div > button {
   margin-right: 10px;
 }
+
+.flex-center > div > form > input {
+  margin-right: 10px;
+  width: 400px;
+}
+
+.flex-center > div > form > label {
+  margin-right: 10px;
+}
