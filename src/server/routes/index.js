@@ -3,7 +3,6 @@ import { renderToNodeStream } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 import App from '../../client/components/App';
 import apiRoutes from './apiRoutes';
-import routes from './routes';
 const router = require('express').Router();
 
 router.use('/api', apiRoutes);
