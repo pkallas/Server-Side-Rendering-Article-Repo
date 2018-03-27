@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import HomePage from '../HomePage';
-import { LinkedPage } from '../LinkedPage';
+import SearchResult from '../SearchResult';
 import ErrorBoundary from '../ErrorBoundary';
 
 export default class App extends Component {
@@ -11,7 +11,7 @@ export default class App extends Component {
         <ErrorBoundary>
           <Switch>
             <Route exact path='/' component={HomePage} />
-            <Route exact path='/linkedpage' component={LinkedPage} />
+            <Route exact path='/searchresult/:username' component={SearchResult} />
           </Switch>
         </ErrorBoundary>
       </Fragment>

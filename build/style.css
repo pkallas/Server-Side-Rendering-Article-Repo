@@ -4,15 +4,24 @@
   align-items: center;
 }
 
-.flex-center > div > button {
+.flex-center > button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.flex-center > a > button {
   margin-right: 10px;
 }
 
-.flex-center > div > form > input {
+.flex-center > input {
   margin-right: 10px;
   width: 400px;
 }
 
-.flex-center > div > form > label {
+.flex-center > label {
   margin-right: 10px;
+}
+
+.flex-center > img {
+  margin-bottom: 10px;
 }

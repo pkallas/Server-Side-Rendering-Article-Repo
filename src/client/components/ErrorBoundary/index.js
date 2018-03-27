@@ -18,7 +18,8 @@ export default class ErrorBoundary extends Component {
 
   render() {
     return this.state.hasError ? (
-        <p>There was an error</p>
+        <p>There was an error. Make sure the username you are searching for
+        is a valid Github user.</p>
       ) : (
         this.props.children
       );

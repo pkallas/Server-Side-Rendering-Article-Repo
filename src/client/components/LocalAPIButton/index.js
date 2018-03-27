@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class GithubSearch extends Component {
+export default class LocalAPIButton extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -18,9 +18,9 @@ export default class GithubSearch extends Component {
   render() {
     return (
       <div className='flex-center'>
-        <button onClick={this.handleClick}>Click me to see your Github search result</button>
+        <button onClick={this.handleClick}>Click me to see my API response</button>
         { this.state.buttonClicked ? (
-          <img src={this.props.data.avatar_url} alt='Github profile picture'></img>
+          <p>{this.props.data}</p>
         ) : (
           null
         ) }

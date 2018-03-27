@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-router.get('/coolButtonPressed', (req, res) => {
+router.get('/localAPIButton', (req, res) => {
   res.json('Thanks for pressing the cool button!');
 });
 

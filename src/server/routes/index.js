@@ -10,13 +10,6 @@ router.use('/api', apiRoutes);
 
 router.get('*', (req, res) => {
 
-  const matchedRoutes = routes.includes(req.url);
-
-  if (!matchedRoutes) {
-    res.status(404).send('The page you requested does not exist');
-    return;
-  }
-
   res.write(`<!DOCTYPE html>
   <html>
     <head>
