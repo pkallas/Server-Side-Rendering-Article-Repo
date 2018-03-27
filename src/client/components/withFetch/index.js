@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-export function withUrl(WrappedComponent, url) {
+export function withFetch(WrappedComponent, url) {
   return class extends Component {
     constructor(props) {
       super(props);
