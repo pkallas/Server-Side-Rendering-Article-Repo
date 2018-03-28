@@ -5,9 +5,7 @@ import GithubSearch from '../GithubSearch';
 export const LinkedPage = (props) => {
   return (
     <Fragment>
-      <div className='flex-center'>
-        <GithubSearch />
-      </div>
+      <GithubSearch />
       <CoolButton />
     </Fragment>
   );

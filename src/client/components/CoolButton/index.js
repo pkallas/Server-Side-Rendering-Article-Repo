@@ -27,7 +27,7 @@ export default class CoolButton extends Component {
     return (
       <div className='flex-center'>
         <div>
-          <button onClick={this.handleButtonClick}>Cool button</button>
+          <button onClick={this.handleButtonClick}>Click me!</button>
         </div>
         { this.state.hasServerResponded ? (
           <div>

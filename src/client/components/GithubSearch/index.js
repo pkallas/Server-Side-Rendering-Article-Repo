@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import axios from 'axios';
 
 export default class GithubSearch extends Component {
@@ -33,20 +33,22 @@ export default class GithubSearch extends Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <label htmlFor='searchbar' >Search by Github username</label>
-          <input id='searchbar' type='text' placeholder='Search...' onChange={this.handleChange} />
-          <button type='submit'>Search</button>
-        </form>
+      <Fragment>
+        <div className='flex-center'>
+          <form onSubmit={this.handleSubmit}>
+            <label htmlFor='searchbar' >Search by Github username</label>
+            <input id='searchbar' type='text' placeholder='Search...' onChange={this.handleChange} />
+            <button type='submit'>Search</button>
+          </form>
+        </div>
+        <div className='flex-center'>
         { this.state.githubResult.avatar_url ? (
           <img src={this.state.githubResult.avatar_url} alt='Github Profile Picture' />
         ) : (
-          <div>
             <h3>Search for a Github user's profile picture</h3>
-          </div>
         ) }
       </div>
+      </Fragment>
     );
   }
 }
