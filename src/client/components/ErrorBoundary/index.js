@@ -9,7 +9,7 @@ export default class ErrorBoundary extends Component {
   }
 
   componentDidCatch(error, info) {
-    console.error('An error occurred ---> ', error);
+    console.log('An error occurred ---> ', error);
     console.log('Here is the info for the above error ---> ', info);
     this.setState({
       hasError: true,
